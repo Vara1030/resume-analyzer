@@ -262,10 +262,10 @@ with st.sidebar:
     st.markdown("---")
     
     api_key = st.text_input(
-        "🔑 Groq API Key",
-        type="password",
-        value="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"
-    )
+    "Groq API Key",
+    type="password",
+    help="Get your free API key from console.groq.com"
+)
     
     if api_key:
         os.environ["GROQ_API_KEY"] = api_key
