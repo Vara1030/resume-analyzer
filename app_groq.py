@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import PyPDF2
+import pypdf
 import docx
 from groq import Groq
 
@@ -345,7 +345,7 @@ with col2:
         text = ""
         try:
             if uploaded_file.name.endswith('.pdf'):
-                pdf_reader = PyPDF2.PdfReader(uploaded_file)
+                pdf_reader = pypdf.PdfReader(uploaded_file)  
                 for page in pdf_reader.pages:
                     text += page.extract_text()
             else:
